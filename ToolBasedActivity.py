@@ -16,7 +16,7 @@ def recommend_books(G, user):
     # Use Inclusion-Exclusion to calculate the set of books not yet read by the user
     recommended_books = all_books - already_read
     for neighbor in G.neighbors(user):
-        recommended_books -= set(G.neighbors(neighbor))  # Exclude books read by the user's neighbors
+        recommended_books -= set(G.neighbors(neighbor))
 
     return recommended_books
 
